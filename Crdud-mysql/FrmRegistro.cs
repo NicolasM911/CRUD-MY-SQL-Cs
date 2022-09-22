@@ -40,7 +40,7 @@ Modelamiento de Bases de Datos 2022
                 try
                 {
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show($"Usuario registrado correctamente");
+                    MessageBox.Show($"Usuario {txtNewUser.Text} registrado correctamente");
                     this.Hide();
                     FrmLogin f1 = new FrmLogin();
                     f1.Show();

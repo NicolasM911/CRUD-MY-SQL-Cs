@@ -67,5 +67,41 @@ Modelamiento de Bases de Datos 2022
             f2.Show();
             this.Hide();
         }
+
+        private void txtUser_Leave(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "")
+            {
+                txtUser.Text = "Ingrese su usuario";
+                txtUser.ForeColor = Color.White;
+            }
+        }
+
+        private void txtPass_Leave(object sender, EventArgs e)
+        {
+            if (txtPass.Text == "")
+            {
+                txtUser.Text = "Ingrese su contraseña";
+                txtUser.ForeColor = Color.White;
+            }
+        }
+
+        private void txtUser_Enter(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "Ingrese su usuario")
+            {
+                txtUser.Text = "";
+                txtUser.ForeColor = Color.White;
+            }
+        }
+
+        private void txtPass_Enter(object sender, EventArgs e)
+        {
+            if (txtPass.Text == "Ingrese su contraseña")
+            {
+                txtPass.Text = "";
+                txtUser.ForeColor = Color.White;
+            }
+        }
     }
 }

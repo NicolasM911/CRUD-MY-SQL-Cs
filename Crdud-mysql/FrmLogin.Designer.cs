@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnRegistar = new System.Windows.Forms.Button();
@@ -36,12 +37,14 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -60,6 +63,7 @@
             // 
             // btnRegistar
             // 
+            this.btnRegistar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistar.ForeColor = System.Drawing.Color.Red;
             this.btnRegistar.Location = new System.Drawing.Point(211, 359);
             this.btnRegistar.Name = "btnRegistar";
@@ -72,6 +76,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Lime;
             this.label1.Location = new System.Drawing.Point(183, 320);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(172, 20);
@@ -81,15 +86,18 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBox1.Location = new System.Drawing.Point(332, 223);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(89, 24);
             this.checkBox1.TabIndex = 11;
             this.checkBox1.Text = "Mostrar";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // btnLogin
             // 
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Location = new System.Drawing.Point(211, 269);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(116, 34);
@@ -100,30 +108,53 @@
             // 
             // txtPass
             // 
-            this.txtPass.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtPass.BackColor = System.Drawing.SystemColors.Desktop;
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtPass.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.ForeColor = System.Drawing.SystemColors.Menu;
             this.txtPass.Location = new System.Drawing.Point(105, 186);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(315, 32);
             this.txtPass.TabIndex = 9;
+            this.txtPass.Text = "Ingrese su contraseña";
             this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
+            this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
             // 
             // txtUser
             // 
-            this.txtUser.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtUser.BackColor = System.Drawing.SystemColors.Desktop;
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtUser.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.ForeColor = System.Drawing.SystemColors.Menu;
             this.txtUser.Location = new System.Drawing.Point(105, 102);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(315, 32);
             this.txtUser.TabIndex = 8;
+            this.txtUser.Text = "Ingrese su usuario";
             this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
+            this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(155, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(221, 29);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Nicolas MySql-C#";
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(527, 494);
             this.Controls.Add(this.btnRegistar);
             this.Controls.Add(this.label1);
@@ -138,6 +169,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,6 +185,7 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.Label label2;
     }
 }
 
